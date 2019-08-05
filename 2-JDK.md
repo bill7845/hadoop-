@@ -98,6 +98,16 @@
 
 * cd /tmp
 * => wget http://apache.tt.co.kr/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz 다운하기
+* => tar -xvzf hadoop-2.7.7.tar.gz
+* => mkdir -p /opt/hadoop/2.7.7
+* => mv hadoop-2.7.7/* /opt/hadoop/2.7.7/
+* => ln -s /opt/hadoop/2.7.7 /opt/hadoop/current
+
+* hadoop 사용자 추가
+* => useradd hadoop
+* => passwd hadoop   ( 비밀번호도 hadoop 으로 - 비밀번호 입력시는 글자표시 안됨  )
+* => chown -R hadoop:hadoop /opt/hadoop/  ( 루트에서 만든 파일의 권한을 hadoop에게 권함)
+* => su - hadoop
 
 
 
