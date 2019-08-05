@@ -1,2 +1,2 @@
 
-![ex_screenshot](./img/1.png)
+![1](../img/1.png)
