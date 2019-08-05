@@ -150,6 +150,12 @@
 
 ![25 멀티제어로 한번에 업데이트해보기](https://user-images.githubusercontent.com/35517797/62438258-93cf2080-b781-11e9-8ad3-84e419fa028e.PNG)
 
+<br>
+
+<b> yum install telnet svn git nc ntp wget vim net-tools </b> multi로 설치하기 
+* 우측 상단 multipaste로 붙여넣기 가능
+* multiExec 사용 시 line 조정 해줘야함 (clear) 
+
 
 
 
