@@ -3,7 +3,7 @@
 
 <br><br>
 
-### VirtualBox 설치하기
+### < VirtualBox 설치하기 >
 
 
 <br><br>
@@ -158,7 +158,7 @@
 
 <br><br>
 
-### putty 설치 (서버접속 도구?)
+### < putty 설치 (서버접속 도구?) >
 
 ![15 putty 설치](https://user-images.githubusercontent.com/35517797/62436724-7e56f800-b77b-11e9-9669-ab71b02cb066.PNG)
 
@@ -196,7 +196,7 @@
 
 <br><br>
 
-### MobaXterm 설치하기
+### < MobaXterm 설치하기 > 
 
 <br><br>
 
