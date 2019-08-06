@@ -372,17 +372,17 @@ Hadoop datanode 디렉토리 생성 (dn02 : Datanode) <br>
 <br><br>
 
 <p>
-* sudo 명령어 안될 때 
+* sudo 명령어 안될 때 <br>
+<br>
+root 계정에서 visudo -f /etc/sudoers <br>
+ecs :100 라인  root  ALL=(ALL) ALL 을 yy로 복사하고 바로 p 눌려서 붙이고 <br>
 
-root 계정에서 visudo -f /etc/sudoers
- ecs :100 라인  root  ALL=(ALL) ALL 을 yy로 복사하고 바로 p 눌려서 붙이고
-
-root를 hadoop으로 변경
-root   ALL=(ALL) ALL
-hadoop ALL=(ALL) ALL
-여기에 패스워드까지 묻지 않고 연결하고 싶으면 
-hadoop ALL=(ALL) NOPASSWD: ALL  ( 계정 등록 ) 
-%hadoop ALL=(ALL) NOPASSWD: ALL ( 그룹 등록 )
+root를 hadoop으로 변경 <br>
+root   ALL=(ALL) ALL <br>
+hadoop ALL=(ALL) ALL <br>
+여기에 패스워드까지 묻지 않고 연결하고 싶으면  <br>
+hadoop ALL=(ALL) NOPASSWD: ALL  ( 계정 등록 )  <br>
+%hadoop ALL=(ALL) NOPASSWD: ALL ( 그룹 등록 ) <br>
 </p>
 
 
