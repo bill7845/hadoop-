@@ -14,6 +14,8 @@
   
   <br>
   
+  <hr/>
+  
   2. 여기 복붙
   #### HADOOP 2.7.7 start ############
   PATH=$PATH:$HOME/bin
@@ -28,6 +30,8 @@
   #### JAVA 1.8.0 end##############
   
   <br>
+  
+  <hr/>
   
   3. 변경한 부분 적용하기
   source ~/.bash_profile
