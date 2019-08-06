@@ -2,7 +2,8 @@
 
 ## hadoop
 
-### root 작업 내용은 virtualBox  hadoop계정 작업은 mobaXterm
+### root 작업 내용은 virtualBox  hadoop계정 작업은 mobaXterm <br>
+### 나갈 때 반드시 stop-all.sh 
 
 <br><br>
 
