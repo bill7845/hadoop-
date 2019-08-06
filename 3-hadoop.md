@@ -38,17 +38,23 @@
   
   <br>
   
+  <hr/>
+  
   4. 적용되었는지 확인하기
   java -version
   hadoop version
   
   <br>
   
+  <hr/>
+  
   * hadoop 계정 밑에 tmp 폴더 만들기
   mkdir tmp
   cd tmp
   
   <br>
+  
+  <hr/>
   
   * java 파일 만들어보기
   vi Hello.java
@@ -59,13 +65,15 @@
   * <b> 여기까지 과정 nn01,dn01,dn02 전부 다 적용( multi로하지말고 각각)
   
   <br><br>
-=====================================================================================================================================
+==============================================================================================
   
   * 비밀번호없이 각노드를 접속할 수 있도록 공개키 공유(SSH)
   
   1. vi /etc/hosts (root 권한으로 ) - localhost 꼭 지운다 ( 모든 노드 다 )   ## root 계정으로 들어가서 하기(3개 가상머신 전부다)
   
   <br>
+  
+  <hr/>
   
   2. 이거 복붙 ( 원래 있던거 다 지우고)
      192.168.56.101 nn01
@@ -75,6 +83,8 @@
      ![host](https://user-images.githubusercontent.com/35517797/62506047-14e9ee80-b83a-11e9-8bba-b6946de77a93.PNG)
 
 <br>
+
+<hr/>
 
   3. ssh 키 생성하기
   
@@ -102,7 +112,9 @@
 [hadoop@dn02 ~]$ ssh-copy-id hadoop@dn02
 
 이렇게 하면 패스워드없이 이동가능해짐
+
 ****패스워드없이 이동이 가능하다.  ( 나올 때는 exit 또는 logout 으로 나온다 )
+
 [hadoop@nn01 ~]$ ssh dn01
 [hadoop@nn01 ~]$ ssh dn02
 
@@ -130,6 +142,8 @@
 </property>
 
 <br>
+
+</hr>
 
 * 2. hdfs-site.xml
 => vi /opt/hadoop/current/etc/hadoop/hdfs-site.xml
@@ -166,6 +180,8 @@
 
 <br>
 
+<hr/>
+
 * 3. yarn-site.xml
 => vi /opt/hadoop/current/etc/hadoop/yarn-site.xml
 => <configuration> 태그안에 아래태그들 붙여넣기
@@ -191,10 +207,15 @@
 
 <br>
 
+<hr>
+
 * 4. mapred-site.xml 템플릿 복사
+
 => cp /opt/hadoop/current/etc/hadoop/mapred-site.xml.template /opt/hadoop/current/etc/hadoop/mapred-site.xml
 
 <br>
+
+<hr/>
 
 * 5. mapred-site.xml * 
 
@@ -216,12 +237,16 @@
 
 <br> 
 
+<hr/>
+
 * 6. masters        (*name node가 아니라 secondary node 지정임)
 
 => vi /opt/hadoop/current/etc/hadoop/masters
 => nn01 입력 후 저장
 
 <br>
+
+<hr/>
 
 * 7. slaves
 
@@ -232,12 +257,16 @@ dn02 <br>
 
 <br>
 
+<hr/>
+
 * 8. hadoop-env.sh
 
 => vi /opt/hadoop/current/etc/hadoop/hadoop-env.sh 
 => export JAVA_HOME=/opt/jdk/current (25liine 수정)
 
 <br>
+
+<hr/>
 
 * 9. yarn-env.sh
 
@@ -246,6 +275,8 @@ dn02 <br>
 
 <br>
 
+<hr/>
+
 
 * 10. dn01,dn02에도 설정해주기
 
@@ -253,6 +284,8 @@ dn02 <br>
 => [root@nn01 ~]# scp -r /opt/hadoop/* dn02:/opt/hadoop    ( root 계정에서 하기! // nn01의 설정을 dn02로 복사)
 
 <br>
+
+<hr/>
 
 => 복사 후 dn01,dn02 계정 링크,소유자 설정해주기
 [dn01(root 계정)] 심볼릭링크와 소유자를 다시 설정한다. 
@@ -268,6 +301,8 @@ c. [root@dn02 ~]# chown -R hadoop:hadoop /opt/hadoop/ <br>
 
 <br><br>
 
+<hr/>
+
 * 11. Hadoop namenode 디렉토리 생성 (nn01 : Namenode  // 멀티창 x)
 
 => mkdir -p ~/hadoop_data/hdfs/namenode
@@ -282,13 +317,19 @@ Hadoop datanode 디렉토리 생성 (dn02 : Datanode)
 
 <br>
 
+<hr/>
+
 * 12. name node 포맷
 => hadoop namenode -format
 
 <br>
 
+<hr/>
+
 * 13. Daemon 시작 (nn01)
 => start-all.sh
+
+<hr/>
 
 * 14. 정상확인
 => jps <br>
@@ -309,6 +350,8 @@ Hadoop datanode 디렉토리 생성 (dn02 : Datanode)
 7041 DataNode
 7141 NodeManager
 7271 Jps
+
+<hr/>
 
 <br><br>
 
