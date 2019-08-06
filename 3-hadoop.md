@@ -359,6 +359,34 @@ Hadoop datanode 디렉토리 생성 (dn02 : Datanode) <br>
 <br><br>
 
 
+============================================================
+
+<br>
+
+*  su 명령어로 계정변경 가능하도록 ] - 각 노드에서 모두 수정 <br>
+
+=>  [root@nn01 ~]# vi /etc/pam.d/su  (* root 계정(virtualBox)에서 ) <br>
+=>   10,11,12 라인에 vagrant 라고 보이는 3줄 주석처리 // 10번줄 커서 놓고 3줄삭제 (dd 3번) <br>
+=> [root@nn01 ~]# su - hadoop  //가능해짐  // dn01,dn02 에도 똑같이
+
+<br><br>
+
+<p>
+* sudo 명령어 안될 때 
+
+root 계정에서 visudo -f /etc/sudoers
+ ecs :100 라인  root  ALL=(ALL) ALL 을 yy로 복사하고 바로 p 눌려서 붙이고
+
+root를 hadoop으로 변경
+root   ALL=(ALL) ALL
+hadoop ALL=(ALL) ALL
+여기에 패스워드까지 묻지 않고 연결하고 싶으면 
+hadoop ALL=(ALL) NOPASSWD: ALL  ( 계정 등록 ) 
+%hadoop ALL=(ALL) NOPASSWD: ALL ( 그룹 등록 )
+</p>
+
+
+
 
 
 
