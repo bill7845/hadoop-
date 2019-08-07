@@ -1,3 +1,6 @@
+### java -> maven -> project Update -> RunAS -> maven Install <br>
+### winscp -> 생성된 jar 파일 리눅스로 옮기기
+
 
 ## hadoop 명령어
 
