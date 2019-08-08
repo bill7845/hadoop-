@@ -62,4 +62,21 @@
 
 [hadoop@nn01 ~]$ hdfs dfs -rm -r /output/airline1[hadoop@nn01 ~]$ hdfs dfs -rm -r /output/airline1  <br>
 
+<br><br>
+
+* jar 파일 실행하기 <br>
+
+[hadoop@nn01 ~]$ yarn jar /home/hadoop/source/jar파일이름 패키지명.메인메서드명 /input/data/airline/2008.csv /output/airline5 <br>
+[hadoop@nn01 ~]$ yarn jar jar파일경로/jar파일이름 패키지명.메인메서드명 데이터경로/2008.csv 출력경로/출력파일이름설정(이미존재하면안됨)
+
+<br><br>
+
+* jar 파일 실행 결과 확인하기 <br>
+
+[hadoop@nn01 ~]$ hdfs dfs -cat /output/airline/part-r-00000 <br>
+[hadoop@nn01 ~]$ hdfs dfs -cat 출력파일경로
+
+<br><br>
+
+* 
  
